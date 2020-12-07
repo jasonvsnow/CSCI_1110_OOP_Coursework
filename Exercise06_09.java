@@ -1,8 +1,8 @@
-public class Chapter1_1 {
+public class Exercise06_09 {
 	public static void main(String[] args) {
 		double ft = 0;
 		double met = 15;
-		System.out.printf("%-6s %-6s \t %-6s %-6s\n", "Feet", "Meters", "Feet", "Meters");
+		System.out.printf("%-6s %-6s \t %-6s %-6s\n", "Feet", "Meters", "Meters", "Feet");
 		System.out.println("-------------------------------");
 		for (int x = 0; x < 10; x++) {
 			ft += 1;
