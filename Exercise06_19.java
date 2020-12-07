@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Exercise06_19 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Give three sides: ");
+		System.out.print("Enter the the length of the 3 sides of a triangle: ");
 		double sone = input.nextDouble();
 		double stwo = input.nextDouble();
 		double sthree = input.nextDouble();
