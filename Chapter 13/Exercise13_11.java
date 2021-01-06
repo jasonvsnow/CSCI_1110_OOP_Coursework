@@ -1,8 +1,16 @@
+/*
+Author: Jason Snow
+Date: 1/5/2021
+
+This program has an Octagon class which extends the GeometricObject class and implements the Comparable and Cloneable interfaces. The program then tests it by making one octagon object, cloning it, and comparing the clone to the origional.
+*/
 import java.util.*;
 
 public class Exercise13_11 {
 	public static void main(String[] args) {
-		
+		Octagon test1 = new Octagon(4);
+		Octagon test2 = (Octagon)test1.clone();
+		System.out.print(test1.compareTo(test2));
 	}
 }
 
@@ -60,13 +68,16 @@ class Octagon extends GeometricObject implements Cloneable, Comparable<Octagon> 
 		this.sides = sides;
 	}
 	public double getSides() {
-		
+		return sides;
+	}
+	public void setSides(double sides) {
+		this.sides = sides;
 	}
 	public double getArea() {
-		
+		return (2 + 4/(Math.sqrt(2))) * sides * sides;
 	}
 	public double getPerimeter() {
-		
+		return sides * 8;
 	}
 	
 	@Override
@@ -77,6 +88,11 @@ class Octagon extends GeometricObject implements Cloneable, Comparable<Octagon> 
 	}
 	
 	public Object clone() {
-		return super.clone();
+		try {
+			return super.clone();
+		}
+		catch (CloneNotSupportedException ex) {
+			return null;
+		}
 	}
 }
