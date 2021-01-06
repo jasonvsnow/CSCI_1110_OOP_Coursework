@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Exercise13_11 {
 	public static void main(String[] args) {
 		
@@ -46,4 +48,35 @@ abstract class GeometricObject {
 	public abstract double getArea();
 	
 	public abstract double getPerimeter();
+}
+
+class Octagon extends GeometricObject implements Cloneable, Comparable<Octagon> {
+	private double sides;
+	
+	public Octagon() {
+		sides = 1;
+	}
+	public Octagon(double sides) {
+		this.sides = sides;
+	}
+	public double getSides() {
+		
+	}
+	public double getArea() {
+		
+	}
+	public double getPerimeter() {
+		
+	}
+	
+	@Override
+	public int compareTo(Octagon o) {
+		if (getArea() > o.getArea()) return 1;
+		else if (getArea() < o.getArea()) return -1;
+		else return 0;
+	}
+	
+	public Object clone() {
+		return super.clone();
+	}
 }
