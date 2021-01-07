@@ -8,8 +8,11 @@ import java.util.*;
 
 public class Exercise13_11 {
 	public static void main(String[] args) {
+		//create first octagon 
 		Octagon test1 = new Octagon(4);
+		//clone the octagon
 		Octagon test2 = (Octagon)test1.clone();
+		//compare the two, print result of compare
 		System.out.print(test1.compareTo(test2));
 	}
 }
